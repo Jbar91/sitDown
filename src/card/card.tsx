@@ -1,3 +1,4 @@
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Students } from "../list";
 import "./card.scss";
 
@@ -9,23 +10,58 @@ export function Card() {
 
   return (
     <>
-      <div className="container1">
-        {firstHalf.map((student) => (
-          <div key={student.name} className="leftContainer">
-            <img src={student.img} alt={student.name} />
-            <h2>{student.name}</h2>
-          </div>
-        ))}
-      </div>
-
-      <div className="container2">
-        {secondHalf.map((student) => (
-          <div key={student.name} className="rightContainer">
-            <img src={student.img} alt={student.name} />
-            <h2>{student.name}</h2>
-          </div>
-        ))}
-      </div>
+      <DragDropContext onDragEnd={() => {}}>
+        <Droppable droppableId="students">
+          {(provided) => (
+            <div {...provided.droppableProps} ref={provided.innerRef}>
+              <ul className="container1">
+                {firstHalf.map((student, index) => (
+                  <Draggable
+                    key={student.name}
+                    draggableId={student.name}
+                    index={index}
+                  >
+                    {(provided) => (
+                      <li
+                        key={student.name}
+                        className="leftContainer"
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                      >
+                        <img src={student.img} alt={student.name} />
+                        <h2>{student.name}</h2>
+                      </li>
+                    )}
+                  </Draggable>
+                ))}
+              </ul>
+              <ul className="container2">
+                {secondHalf.map((student, index) => (
+                  <Draggable
+                    key={student.name}
+                    draggableId={student.name}
+                    index={index}
+                  >
+                    {(provided) => (
+                      <li
+                        key={student.name}
+                        className="rightContainer"
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                      >
+                        <img src={student.img} alt={student.name} />
+                        <h2>{student.name}</h2>
+                      </li>
+                    )}
+                  </Draggable>
+                ))}
+              </ul>
+            </div>
+          )}
+        </Droppable>
+      </DragDropContext>
     </>
   );
 }
