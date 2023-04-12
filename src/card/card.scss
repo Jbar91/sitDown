@@ -5,22 +5,23 @@
 
   .left-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     border: 1px solid white;
-    justify-content: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    width: 14rem;
-    height: 6rem;
+    width: 11rem;
+    height: 7rem;
+    background-color: #242424;
 
     img {
-      width: 4rem;
-      padding-top: 0.5rem;
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }
@@ -29,25 +30,28 @@
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 6rem;
 
   .right-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     border: 1px solid white;
-    justify-content: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    width: 14rem;
-    height: 6rem;
+    width: 11rem;
+    height: 7rem;
+    background-color: #242424;
 
     img {
-      width: 4rem;
-      padding-top: 0.5rem;
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 }

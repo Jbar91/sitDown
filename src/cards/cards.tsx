@@ -1,7 +1,7 @@
-import { Droppable } from 'react-beautiful-dnd';
-import { Card } from '../card/card';
-import './cards.scss';
-import { useStudents } from '../hook/useStudents';
+import { Droppable } from "react-beautiful-dnd";
+import { Card } from "../card/card";
+import "./cards.scss";
+import { useStudents } from "../hook/useStudents";
 
 export function Cards() {
   const { students, half } = useStudents();

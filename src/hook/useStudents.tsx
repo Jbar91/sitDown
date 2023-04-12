@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Students } from '../list';
+import { useState } from "react";
+import { Students } from "../list";
 
 export function useStudents() {
   const studentsList = Students.sort((a, b) => 0.5 - Math.random());

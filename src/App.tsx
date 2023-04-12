@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import './App.scss';
-import { Cards } from './cards/cards';
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
-import { Students } from './list';
-import { useStudents } from './hook/useStudents';
+import { useState } from "react";
+import "./App.scss";
+import { Cards } from "./cards/cards";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import { Students } from "./list";
+import { useStudents } from "./hook/useStudents";
 
 function App() {
   const { handleOnDragEnd } = useStudents();
@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <DragDropContext onDragEnd={handleOnDragEnd}>
-        <p>marico el que lo lea</p>
         <Cards></Cards>
+        <p>mesa de los profes</p>
       </DragDropContext>
     </>
   );
