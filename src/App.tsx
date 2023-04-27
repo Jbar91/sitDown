@@ -12,7 +12,7 @@ function App() {
     <>
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Cards></Cards>
-        <p>mesa de los profes</p>
+        <p>Mesa de los profes</p>
         <button onClick={refreshPage}>Recolocar</button>
       </DragDropContext>
     </>
