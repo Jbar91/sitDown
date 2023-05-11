@@ -11,6 +11,7 @@ export function useStudents() {
   const handleOnDragEnd = (result: any) => {
     if (!result.destination) return;
 
+    console.log("2");
     const items = students;
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
