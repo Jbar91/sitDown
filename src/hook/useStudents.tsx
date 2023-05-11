@@ -10,19 +10,14 @@ export function useStudents() {
 
   const handleOnDragEnd = (result: any) => {
     if (!result.destination) return;
-    // if (result.destination.droppableId === result.source.droppableId) {
-    //   console.log(23);
-    //   result.source = {
-    //     droppableId: result.destination.droppableId,
-    //     index: result.destination.index,
-    //   };
-    // }
 
+    console.log("2");
     const items = students;
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
     setStudents(items);
+    console.log("3");
   };
 
   return {
