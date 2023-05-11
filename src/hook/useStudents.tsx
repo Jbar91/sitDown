@@ -17,6 +17,7 @@ export function useStudents() {
     items.splice(result.destination.index, 0, reorderedItem);
 
     setStudents(items);
+    console.log("3");
   };
 
   return {
