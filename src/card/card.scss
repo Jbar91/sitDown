@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 0.6rem;
     border: 1px solid white;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -42,6 +43,7 @@
     padding-right: 0.5rem;
     width: 11rem;
     height: 7rem;
+    gap: 0.6rem;
     background-color: #242424;
 
     img {
